@@ -260,7 +260,67 @@ body {
     border-radius: 20px;
 }
 
+.library .languages .languages__button:hover{
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+    border: 2px solid #878787;
+}
 
+.disclaimer-premium{ 
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    background: linear-gradient(to left,rgb(83, 164, 250), rgb(146, 1, 112) );
+    bottom: 0;
+    padding: 14px 10px;
+    width: 100%;
 
+}
 
+.disclaimer-premium .text{
+    display: flex;
+    flex-direction: column;
+    padding: 0 14px;
+    color:#edebeb;
+}
 
+.disclaimer-premium .text .text-title{
+    font-weight: 200;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    padding: 0 0 0 10px;
+}
+
+.disclaimer-premium .text .text-subtitle{
+    font-weight: 300;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    padding: 10PX 0 18px 10PX;
+}
+
+.disclaimer-premium .button{
+    margin: 0 20px 0 0;
+}
+
+.disclaimer-premium .footer__button{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    padding: 10px 10px;
+    border: 0px;
+    width: 156px;
+    cursor: pointer;
+}
+
+.disclaimer-premium .footer__button:hover{
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
