@@ -1,20 +1,10 @@
 html ::-webkit-scrollbar { /*Defini a largura da barra de rolagem*/
     width: 14px;
-    
-  }
-
-html ::-webkit-scrollbar-thumb { /*Serve para customizar o background da barra de rolagem*/
-    /*border-radius: 50px;*/
-    background: #a0a0a1;
-}
-  
-html ::-webkit-scrollbar-track { /*Serve para customizar a barrinha da barra de rolagem*/
-    background: transparent;
 }
 
-body {
-    background-color: black;
-}
+
+
+/* Início sidebar */
 
 .sidebar {
     position: fixed;
@@ -26,13 +16,14 @@ body {
 }
 
 .sidebar__navigation {
-    background-color: #121212;
+    background-color: var(--bg-container);
     border-radius: 8px;
     padding: 0;
+    cursor: pointer;
 }
 
 .sidebar__navigation .logo {
-    background: #121212;
+    background: var(--bg-container);
     display: flex;
     border-radius: 8px;
     padding: 16px 0 0 16px;
@@ -52,15 +43,15 @@ body {
 }
 
 .sidebar nav ul li a{
-    color: #b3b3b3;
+    color: var(--text-side-color);
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--font-dm-sans);
 }
 
 .sidebar nav ul li a:hover{
-    color: white;
+    color: var(--text-base-light);
 }
 
 .sidebar nav ul li .fa{
@@ -70,14 +61,14 @@ body {
 }
 
 .library {
-    background-color: #121212;
+    background-color: var(--bg-container);
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     min-block-size: 40px;
     padding: 4px 8px;
-    color: #b3b3b3;
+    color: var(--text-side-color);
     font-weight: 600;
     font-size: 14px;
     margin-top: 10px;
@@ -91,16 +82,16 @@ body {
 .library .library__button {
     display: flex;
     margin-right: 10px;
-    color: #b3b3b3;
+    color: var(--text-side-color);
     background-color: transparent;
     border: 0px;
     font-size: 1rem;
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
     text-align: center;
     text-decoration: none;
     text-transform: none;
     padding: 20px 10px;
+    cursor: pointer;
 }
 
 .library .library__button .fa{
@@ -111,18 +102,44 @@ body {
 }
 
 .library .library__button:hover{
-    color: white;
+    color: var(--text-base-light);
+}
+
+.library .library__plus{ 
+    display: flex; 
+    padding: 12px 10px;
+    margin: 16px 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    align-items: center;
+    color: var(--text-side-color);
+}
+
+.library .library__plus:hover{  
+    border-radius: 50%;
+    background-color: rgba(138, 138, 138, 0.128);
     cursor: pointer;
+    color: var(--text-base-light);
 }
 
-.library .library__content .fa-plus{
-    margin: 24px 10px;
-}
-
+/* Scroll no sidebar */
 .section-scroll{
+    overflow: auto;
     height: 100px;
-    overflow-y: scroll;
+    scrollbar-gutter: stable;
 }
+
+.section-scroll::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.section-scroll:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(208, 208, 208, 0.37);
+}
+
+/* Fim do Scroll */
 
 .section-playlist {
     display: flex;
@@ -131,7 +148,7 @@ body {
     justify-content: space-between;
     gap: 20px;
     background-color: #242424;
-    color: #b3b3b3;
+    color: var(--text-side-color);
     font-weight: 600;
     font-size: 14px;
     margin: 8px 0;
@@ -145,16 +162,14 @@ body {
 
 .section-playlist .section-playlist__content .text{
     padding-bottom: 14px;
-    color: white;
+    color: var(--text-base-light);
 }
 
 .section-playlist .section-playlist__content .title{
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
 }
 
 .section-playlist .section-playlist__content .subtitle{
-    font-family: "DM Sans", sans-serif;
     font-weight: 500;
     font-size: 12px;
 }
@@ -167,7 +182,6 @@ body {
     border-radius: 20px;
     font-size: 14px;
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
     text-decoration: none;
     text-transform: none;
     padding: 10px;
@@ -184,7 +198,7 @@ body {
     justify-content: space-between;
     gap: 20px;
     background-color: #242424;
-    color: #b3b3b3;
+    color: var(--text-side-color);
     font-weight: 600;
     font-size: 14px;
     margin: 8px 0;
@@ -198,16 +212,14 @@ body {
 
 .section-podcast .section-podcast__content .text{
     padding-bottom: 14px;
-    color: white;
+    color: var(--text-base-light);
 }
 
 .section-podcast .section-podcast__content .title{
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
 }
 
 .section-podcast .section-podcast__content .subtitle{
-    font-family: "DM Sans", sans-serif;
     font-weight: 500;
     font-size: 12px;
 }
@@ -216,11 +228,10 @@ body {
     display: flex;
     justify-content: center;
     background-color: #fff;
-    color: #000;
+    color: var(--text-base-dark);
     border-radius: 20px;
     font-size: 14px;
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
     text-decoration: none;
     text-transform: none;
     padding: 10px;
@@ -228,6 +239,11 @@ body {
     border: 0px;
     width: 156px;
     cursor: pointer;
+}
+
+.section-podcast__content .section-podcast__button:hover,
+.section-playlist__content .section-playlist__button:hover{
+    transform: scale(1.04);
 }
 
 .library .cookies{
@@ -248,7 +264,7 @@ body {
 .library .languages .languages__button{
     background-color: transparent;
     border: 1px solid #878787;
-    color: #fff;
+    color: var(--text-base-light);
     font-weight: bold;
     cursor: pointer;
     align-items: center;
@@ -259,10 +275,13 @@ body {
 }
 
 .library .languages .languages__button:hover{
-    transition: all 200ms ease-in;
-    transform: scale(1.1);
+    transform: scale(1.04);
     border: 2px solid #878787;
 }
+
+/* Fim sidebar */
+
+/* Footer */
 
 .disclaimer-premium{ 
     display: flex;
@@ -279,18 +298,17 @@ body {
     flex-direction: column;
     padding: 0 14px;
     color:#edebeb;
+    font-family: var(--font-dm-sans);
 }
 
 .disclaimer-premium .text .text-title{
     font-weight: 200;
-    font-family: "DM Sans", sans-serif;
     font-size: 12px;
     padding: 0 0 0 10px;
 }
 
 .disclaimer-premium .text .text-subtitle{
     font-weight: 300;
-    font-family: "DM Sans", sans-serif;
     font-size: 12px;
     padding: 10PX 0 18px 10PX;
 }
@@ -304,11 +322,10 @@ body {
     justify-content: center;
     align-items: flex-end;
     background-color: #fff;
-    color: #000;
+    color: var(--text-base-dark);
     border-radius: 20px;
     font-size: 14px;
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
     text-decoration: none;
     text-transform: none;
     padding: 10px 10px;
@@ -318,6 +335,5 @@ body {
 }
 
 .disclaimer-premium .footer__button:hover{
-    transition: all 200ms ease-in;
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
