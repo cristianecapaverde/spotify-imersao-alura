@@ -1,8 +1,6 @@
-html ::-webkit-scrollbar { /*Defini a largura da barra de rolagem*/
+/*html ::-webkit-scrollbar { 
     width: 14px;
-}
-
-
+}*/
 
 /* Início sidebar */
 
@@ -11,15 +9,14 @@ html ::-webkit-scrollbar { /*Defini a largura da barra de rolagem*/
     top: 0;
     left: 0;
     bottom: 0;
-    padding: 12px;
-    width: 300px;
+    padding: 8px;
+    width: 278px;
 }
 
 .sidebar__navigation {
     background-color: var(--bg-container);
     border-radius: 8px;
     padding: 0;
-    cursor: pointer;
 }
 
 .sidebar__navigation .logo {
@@ -129,6 +126,10 @@ html ::-webkit-scrollbar { /*Defini a largura da barra de rolagem*/
     overflow: auto;
     height: 100px;
     scrollbar-gutter: stable;
+}
+
+.section-scroll::-webkit-scrollbar{ /*Defini a largura da barra de rolagem*/
+    width: 14px;
 }
 
 .section-scroll::-webkit-scrollbar-thumb {
